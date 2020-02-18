@@ -46,7 +46,7 @@ import example
 
 print(ustubby.stub_module(example))
 ```
-<details><summary>Output</summary><p>
+<summary>Output</summary><p>
 
 ```c
 // Include required definitions first.
@@ -82,7 +82,7 @@ const mp_obj_module_t example_user_cmodule = {
 
 MP_REGISTER_MODULE(MP_QSTR_example, example_user_cmodule, MODULE_EXAMPLE_ENABLED);
 ```
-</p></details>
+</p>
 
 This will parse all the functions in the module and attach them to the same namespace in micropython.
 ##### Note: It will only generate the boilerplate code and not the actual code that does the work such as a + b
@@ -157,7 +157,7 @@ import example
 
 print(ustubby.stub_module(example))
 ```
-<details><summary>Output</summary><p>
+<summary>Output</summary><p>
 
 ```c
 // Include required definitions first.
@@ -245,7 +245,7 @@ const mp_obj_module_t example_user_cmodule = {
 
 MP_REGISTER_MODULE(MP_QSTR_example, example_user_cmodule, MODULE_EXAMPLE_ENABLED);
 ```
-</p></details>
+</p>
 
 #### Adding fully implemented c functions
 Going one step further you can directly add c code to be substituted into the c generated code where the 
@@ -263,7 +263,7 @@ add_ints.code = "    ret_val = a + b;"
 ```
 to get a fully defined function in c
 
-<details><summary>Output</summary><p>
+<summary>Output</summary><p>
 
 ```c
 // Include required definitions first.
@@ -299,7 +299,7 @@ const mp_obj_module_t example_user_cmodule = {
 
 MP_REGISTER_MODULE(MP_QSTR_example, example_user_cmodule, MODULE_EXAMPLE_ENABLED);
 ```
-</p></details>
+</p>
 
 #### Using functions without a module definition
 If you don't need the fully module boiler plate, you can generate individual functions with
